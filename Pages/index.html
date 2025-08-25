@@ -10,153 +10,72 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
             rel="stylesheet">
+        <script src="/app.js"></script>
     </head>
     <body>
 
-        <!--       <header class="header">
+        <header class="header">
+            <img src="../images/Logo2.png" alt="Inventory_Join_Logo">
             <h1 class="header__title">Inventory Join</h1>
-            <p class="header__subtitle">Gestiona tu inventario de manera eficiente</p>
-       </header>   -->
+            <p class="header__subtitle">Gestiona tu inventario de manera
+                eficiente</p>
+        </header>
 
-        <!--NAV SIDEBAR -->
-        <nav class="nav">
+        <main class="main">
 
-            <ul class="nav__list">
+            <div class="main__container">
 
-                <li class="nav__item">
-                    <figure class="nav__figure">
-                        <img src="../assets/home.svg" class="nav__img">
-                    </figure>
+                <h2 class="main__title">Bienvenido a Inventory Join</h2>
 
-                    <article class="nav__show">
+                <p class="main__paragraph">Gestiona tu inventario de manera
+                    eficiente y sencilla con nuestra plataforma todo en uno.
+                </p>
 
-                        <p class="nav__name">
-                            Inicio
-                        </p>
+                <div class="main__cards">
 
-                    </article>
+                    <div class="main__card">
 
-                </li>
+                        <h3 class="main__card-title">Control de Inventario</h3>
 
-                <li class="nav__item">
-                    <figure class="nav__figure">
-                        <img src="..//assets/search.svg" class="nav__img">
-                    </figure>
-                    <div class="div">
-                        <input type="text" class="nav__search"
-                            placeholder="Buscar">
+                        <p class="main__card-paragraph">Mantén un seguimiento
+                            preciso de tus productos, cantidades y ubicaciones
+                            para evitar pérdidas y optimizar tu stock.</p>
                     </div>
 
-                </li>
+                    <div class="main__card">
 
-                <li class="nav__item">
+                        <h3 class="main__card-title">Gestión de Proveedores</h3>
+                        <p class="main__card-paragraph">Administra tus
+                            relaciones con proveedores, realiza pedidos y
+                            controla entregas de manera eficiente.</p>
+                    </div>
 
-                    <figure class="nav__figure">
-                        <img src="..//assets/products.svg" class="nav__img">
-                    </figure>
+                    <div class="main__card">
 
-                    <article class="nav__show">
+                        <h3 class="main__card-title">Reportes y Análisis</h3>
+                        <p class="main__card-paragraph">Genera reportes
+                            detallados sobre el rendimiento de tu inventario y
+                            toma decisiones informadas para mejorar tu
+                            negocio.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
 
-                        <p class="nav__name">
-                            Productos
-                        </p>
+        <class="page-buttons">
+            <button class="Iniciar sesion"
+                onclick="window.location.href='Login.html'">Iniciar
+                Sesion</button>
 
-                    </article>
+            <button class="Registrarse"
+                onclick="window.location.href='Register.html'">Pruebalo
+                Gratis</button>
+        </class>
 
-                </li>
-
-                <li class="nav__item">
-
-                    <figure class="nav__figure">
-                        <img src="..//assets/proveedores.svg" class="nav__img">
-                    </figure>
-
-                    <article class="nav__show">
-
-                        <p class="nav__name">
-                            Proveedores
-                        </p>
-
-                    </article>
-
-                </li>
-
-                <li class="nav__item">
-
-                    <figure class="nav__figure">
-                        <img src="..//assets/reports.svg" class="nav__img">
-                    </figure>
-
-                    <article class="nav__show">
-
-                        <p class="nav__name">
-                            Reportes
-                        </p>
-
-                    </article>
-
-                </li>
-
-                <li class="nav__item nav__item--down">
-
-                    <figure class="nav__figure">
-                        <img src="..//assets/settings.svg" class="nav__img">
-                    </figure>
-
-                    <article class="nav__show">
-
-                        <p class="nav__name">
-                            Configuración
-                        </p>
-
-                    </article>
-
-                </li>
-
-                <li class="nav__item nav__item--user">
-
-                    <figure class="nav__figure">
-                        <img src="..//images/avatar_Profile.png"
-                            class="nav__img nav__img--avatar">
-                    </figure>
-
-                    <article class="nav__show">
-
-                        <div class="nav__name nav__name--user">
-                            <h3 class="nav__username">Sebastian Hernandez</h3>
-                            <p class="nav__account">Cuenta Free</p>
-                        </div>
-
-                    </article>
-
-                </li>
-
-            </ul>
-
-        </nav>
-        <!--INICIO DE SESION-->
-
-        <div class="login-container">
-            <h2>Inicio de Sesion</h2>
-
-            <label for="username">Nombre de compañia:</label>
-            <input type="text" id="username" name="username"><br>
-            <label for="email">Usuario/Correo:</label>
-            <input type="email" id="email" name="email"><br>
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password"><br>
-
-            <class="login-buttons"></class>
-            <button type="submit">Iniciar Sesion</button>
-            <button type="button"
-                onclick="window.location.href='Register.html'">Crear
-                usuario</button>
-            <button type="submit" id="pass">Olvide mi contraseña</button>
-        </div>
-
-        <!---        <footer class="footer">
-            <p class="footer__text">© 2025 Inventory Join. Todos los derechos reservados.</p>
+        <footer class="footer">
+            <p class="footer__text">© 2025 Inventory Join. Todos los derechos
+                reservados.</p>
             <p class="footer__text">Desarrollado por Sebastian Hernandez</p>
-        </footer>  -->
+        </footer>
     </body>
 </html>
