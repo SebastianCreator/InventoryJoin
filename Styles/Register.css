@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #947979;
+  --text-color: #e4e2e2;
+  --text-color-hover: black;
+  --button-color: #646262b2;
+  --alert-color: #e76f51;
+  --cards-color: #e9c46a;
+  --nav-color: #878c8b;
+}
+
+body {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.7rem;
+  background-size: cover;
+  background-color: #c8c8c8cb;
+  gap: 3rem;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/*REGISTRO*/
+
+.register.page {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.register-container {
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: var(--nav-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: "Poppins", sans-serif;
+}
+
+.register-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  font-size: 1.1rem;
+  color: var(--text-color-hover);
+  padding: 3%;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+button {
+  background-color: var(--button-color);
+  color: var(--text-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background-color: rgb(93, 52, 94);
+  color: var(--button-color);
+}
