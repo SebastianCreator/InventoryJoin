@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Perfil de Usuario | Inventory Join</title>
+        <link rel="stylesheet" href="../Styles/Perfil.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+            rel="stylesheet">
+        <script src="..//modules/perfil.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="../Pages/Inicio.html">Inicio</a>
+                <a href="../Pages/index.html">Panel</a>
+                <a href="#" class="active">Perfil</a>
+                <button id="theme-toggle" class="theme-toggle"
+                        aria-label="Cambiar tema">
+                        🌙
+                    </button>
+            </nav>
+        </header>
+
+        <main class="perfil-container">
+            <h1>Mi Perfil</h1>
+
+            <section class="perfil-info">
+                <img src="../images/avatar_Profile.png" alt="Avatar"
+                    class="avatar" />
+                <div class="datos">
+                    <label>Nombre de compañía</label>
+                    <input type="text" value="Logística S.A.S" />
+
+                    <label>Correo electrónico</label>
+                    <input type="email" value="ejemplo@correo.com" />
+
+                    <label>NIT / Cédula</label>
+                    <input type="text" value="1234567890" />
+                </div>
+            </section>
+
+            <section class="perfil-ajustes">
+                <h2>Cambiar contraseña</h2>
+                <input type="password" placeholder="Contraseña actual" />
+                <input type="password" placeholder="Nueva contraseña" />
+                <input type="password"
+                    placeholder="Confirmar nueva contraseña" />
+                <button class="btn-guardar">Guardar cambios</button>
+            </section>
+
+            <section class="perfil-preferencias">
+                <h2>Preferencias</h2>
+                <label>
+                    <input type="checkbox" checked />
+                    Notificaciones por correo
+                </label>
+                <label>
+                    <input type="checkbox" />
+                    Activar modo compacto
+                </label>
+            </section>
+        </main>
+    </body>
+</html>

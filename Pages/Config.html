@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inventory join</title>
+        <link rel="stylesheet" href="../Styles/Config.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+            rel="stylesheet">
+            <script src="..//modules/config.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <span class="logo">Inventory Join</span>
+                <ul class="nav-links">
+                    <li><a href="Inicio.html">Inicio</a></li>
+                    <li><a href="Products.html">Productos</a></li>
+                    <li><a href="Suppliers.html">Proveedores</a></li>
+                    <li><a href="Reports.html">Reportes</a></li>
+                    <li class="active"><a href="#">Configuración</a></li>
+                </ul>
+                <div class="user-menu">
+                    <img src="../images/avatar_Profile.png" alt="Avatar"
+                        class="avatar" />
+                    <span class="username">Sebastián Hernández</span>
+                    <div class="dropdown-user">
+                        <a href="..//Pages/Perfil.html">Mi Perfil</a>
+                        <a href="..//Pages/index.html" id="logout">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section class="configuracion">
+            <h2>⚙️ Configuración del sistema</h2>
+
+            <div class="config-card">
+                <h3>🔔 Alertas de stock</h3>
+                <label>
+                    <input type="checkbox" id="alertaStock" checked />
+                    Activar alertas visuales para bajo stock
+                </label>
+                <input type="number" id="umbralStock" value="5" min="1" />
+                <small>Umbral mínimo para mostrar alerta</small>
+            </div>
+
+            <div class="config-card">
+                <h3>📊 Reportes automáticos</h3>
+                <label>
+                    <input type="checkbox" id="reporteMensual" />
+                    Generar reporte mensual automáticamente
+                </label>
+                <select id="diaReporte">
+                    <option value="1">Día 1</option>
+                    <option value="15">Día 15</option>
+                    <option value="30">Día 30</option>
+                </select>
+            </div>
+
+            <div class="config-card">
+                <h3>🎨 Personalización visual</h3>
+                <label for="temaColor">Color principal:</label>
+                <input type="color" id="temaColor" value="#2e86de" />
+            </div>
+
+            <button class="btn-guardar">💾 Guardar configuración</button>
+        </section>
+    </body>
+</html>

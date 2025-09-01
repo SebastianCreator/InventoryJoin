@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reportes | Inventory Join</title>
+        <link rel="stylesheet" href="../Styles/Reports.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <span class="logo">Inventory Join</span>
+                <ul class="nav-links">
+                    <li><a href="Inicio.html">Inicio</a></li>
+                    <li><a href="Products.html">Productos</a></li>
+                    <li><a href="Suppliers.html">Proveedores</a></li>
+                    <li class="active"><a href="#">Reportes</a></li>
+                    <li><a href="Config.html">Configuración</a></li>
+                </ul>
+                <div class="user-menu">
+                    <img src="../images/avatar_Profile.png" alt="Avatar"
+                        class="avatar" />
+                    <span class="username">Sebastián Hernández</span>
+                    <div class="dropdown-user">
+                        <a href="..//Pages/Perfil.html">Mi Perfil</a>
+                        <a href="..//Pages/index.html" id="logout">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="panel-reportes">
+                <h2>📊 Panel de Reportes</h2>
+
+                <div class="filtros-reportes">
+                    <input type="date" name="fecha" />
+                    <select name="categoria">
+                        <option value="productos">Productos</option>
+                        <option value="proveedores">Proveedores</option>
+                    </select>
+                </div>
+
+                <div class="botones-reportes">
+                    <button>📈 Generar reporte</button>
+                    <button>📤 Exportar</button>
+                </div>
+
+                <div class="kpi-container">
+                    <div class="kpi-box">
+                        <h3>Productos en stock</h3>
+                        <p>1,245 unidades</p>
+                    </div>
+                    <div class="kpi-box">
+                        <h3>Ventas del mes</h3>
+                        <p>$18,320.00</p>
+                    </div>
+                    <div class="kpi-box">
+                        <h3>Proveedores activos</h3>
+                        <p>16 registrados</p>
+                    </div>
+                </div>
+
+                <table class="tabla-reportes">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Categoría</th>
+                            <th>Detalle</th>
+                            <th>Valor</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Aquí van tus filas dinámicas -->
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+
+        <script src="modular.js"></script>
+    </body>
+</html>

@@ -3,193 +3,117 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Productos</title>
+        <title>Productos | Inventory Join</title>
         <link rel="stylesheet" href="../Styles/Products.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
             rel="stylesheet">
+        <script type="module" src="../modules/productos.js"></script>
+
     </head>
     <body>
 
-        <!--NAV SIDEBAR -->
-        <nav class="nav_grid">
-
-            <nav class="nav">
-
-                <ul class="nav__list">
-
-                    <li class="nav__item"
-                        onclick="window.location.href='Inicio.html'">
-                        <figure class="nav__figure">
-                            <img src="../assets/home.svg" class="nav__img">
-                        </figure>
-
-                        <article class="nav__show">
-
-                            <p class="nav__name">
-                                Inicio
-                            </p>
-
-                        </article>
-
-                    </li>
-
-                    <li class="nav__item"
-                        onclick="window.location.href='Products.html'">
-
-                        <figure class="nav__figure">
-                            <img src="..//assets/products.svg" class="nav__img">
-                        </figure>
-
-                        <article class="nav__show">
-
-                            <p class="nav__name">
-                                Productos
-                            </p>
-
-                        </article>
-
-                    </li>
-
-                    <li class="nav__item">
-
-                        <figure class="nav__figure">
-                            <img src="..//assets/proveedores.svg"
-                                class="nav__img">
-                        </figure>
-
-                        <article class="nav__show">
-
-                            <p class="nav__name">
-                                Proveedores
-                            </p>
-
-                        </article>
-
-                    </li>
-
-                    <li class="nav__item">
-
-                        <figure class="nav__figure">
-                            <img src="..//assets/reports.svg" class="nav__img">
-                        </figure>
-
-                        <article class="nav__show">
-
-                            <p class="nav__name">
-                                Reportes
-                            </p>
-
-                        </article>
-
-                    </li>
-
-                    <li class="nav__item nav__item--down">
-
-                        <figure class="nav__figure">
-                            <img src="..//assets/settings.svg" class="nav__img">
-                        </figure>
-
-                        <article class="nav__show">
-
-                            <p class="nav__name">
-                                Configuración
-                            </p>
-
-                        </article>
-
-                    </li>
-
-                    <li class="nav__item nav__item--user">
-
-                        <figure class="nav__figure">
-                            <img src="..//images/avatar_Profile.png"
-                                class="nav__img nav__img--avatar">
-                        </figure>
-
-                        <article class="nav__show">
-
-                            <div class="nav__name nav__name--user">
-                                <h3 class="nav__username">Sebastian
-                                    Hernandez</h3>
-                                <p class="nav__account">Cuenta Free</p>
-                            </div>
-
-                        </article>
-
-                    </li>
-
+        <header>
+            <nav class="navbar">
+                <span class="logo">Inventory Join</span>
+                <ul class="nav-links">
+                    <li><a href="Inicio.html">Inicio</a></li>
+                    <li class="active"><a href="#">Productos</a></li>
+                    <li><a href="Suppliers.html">Proveedores</a></li>
+                    <li><a href="Reports.html">Reportes</a></li>
+                    <li><a href="Config.html">Configuración</a></li>
                 </ul>
-
+                <div class="user-menu">
+                    <img src="../images/avatar_Profile.png" alt="Avatar"
+                        class="avatar" />
+                    <span class="username">Sebastián Hernández</span>
+                    <div class="dropdown-user">
+                        <a href="..//Pages/Perfil.html">Mi Perfil</a>
+                        <a href="..//Pages/index.html" id="logout">Cerrar Sesión</a>
+                    </div>
+                </div>
             </nav>
+        </header>
 
-        </nav>
+        <main>
+            <h1>📦 Panel de Productos</h1>
 
-        <div class="title-product">
-            <h3>Inventario de productos</h3>
-        </div>
-        
-        <div class="products-table">
-            <div class="table">
+            <section class="status-indicators">
+                <div class="status-card stock-ok">✅ En stock: 120</div>
+                <div class="status-card low-stock">⚠️ Bajo stock: 8</div>
+                <div class="status-card out-stock">❌ Sin stock: 3</div>
+            </section>
 
+            <section class="actions">
+                <button id="openModal">➕ Nuevo producto</button>
+                <!-- Modal para agregar producto -->
+                <div id="modalAgregarProducto" class="modal hidden">
+                    <div class="modal-contenido">
+                        <span class="cerrar-modal"
+                            id="cerrarModal">&times;</span>
+                        <h2>Agregar nuevo producto</h2>
+                        <form id="formAgregarProducto">
+                            <label>Nombre:</label>
+                            <input type="text" name="nombre" required />
+
+                            <label>Categoría:</label>
+                            <input type="text" name="categoria" required />
+
+                            <label>Stock:</label>
+                            <input type="number" name="stock" min="0"
+                                required />
+
+                            <label>Precio:</label>
+                            <input type="number" name="precio" min="0"
+                                step="0.01" required />
+
+                            <label>Estado:</label>
+                            <select name="estado">
+                                <option value="Activo">Activo</option>
+                                <option value="Inactivo">Inactivo</option>
+                            </select>
+
+                            <button type="submit">Guardar producto</button>
+                        </form>
+                    </div>
+                </div>
+
+                <button>📤 Exportar</button>
+            </section>
+
+            <section class="table-section">
                 <table>
-
-                    <tr>
-                        <th>Codigo</th>
-                        <th>Descripcion</th>
-                        <th>Precio</th>
-                        <th>Entrada</th>
-                        <th>Salida</th>
-                        <th>Stock</th>
-                    </tr>
-                    <tr>
-                        <td>Dato 1</td>
-                        <td>Dato 2</td>
-                        <td>Dato 3</td>
-                        <td>Dato 4</td>
-                        <td>Dato 5</td>
-                        <td>Dato 6</td>
-                        <th><button type="button" id="edit">Editar</button></th>
-                        <th><button type="button" id="delete">Eliminar</button></th>
-                    </tr>
-                    <tr>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <th><button type="button" id="edit">Editar</button></th>
-                        <th><button type="button" id="delete">Eliminar</button></th>
-
-                    </tr>
-                    <tr>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <th><button type="button" id="edit">Editar</button></th>
-                        <th><button type="button" id="delete">Eliminar</button></th>
-                    </tr>
-                    <tr>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <th><button type="button" id="edit">Editar</button></th>
-                        <th><button type="button" id="delete">Eliminar</button></th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Categoría</th>
+                            <th>Stock</th>
+                            <th>Precio</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mouse inalámbrico</td>
+                            <td>Accesorios</td>
+                            <td>25</td>
+                            <td>$45.000</td>
+                            <td><span
+                                    class="status-tag activo">Activo</span></td>
+                            <td class="table-actions">
+                                <button>✏️ Editar</button>
+                                <button>🗑️ Eliminar</button>
+                            </td>
+                        </tr>
+                        <!-- Más filas aquí -->
+                    </tbody>
                 </table>
-            </div>
-        </div>
-        <div class="agg-button">
-            <button type="button">Agregar Producto</button>
-        </div>
+            </section>
+        </main>
+
     </body>
-        <div class="title-product">
+
+</html>

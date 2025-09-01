@@ -1,0 +1,222 @@
+:root {
+  --color-primary: #2c3e50;
+  --color-secondary: #34495e;
+  --color-accent: #3498db;
+  --color-success: #27ae60;
+  --color-warning: #f39c12;
+  --color-danger: #e74c3c;
+  --color-light: #ecf0f1;
+  --font-main: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: #f5f7fa;
+  color: var(--color-primary);
+  padding: 20px;
+}
+
+header {
+  background-color: var(--color-secondary);
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Navbar */
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #34495e;
+  padding: 15px 20px;
+  color: white;
+  border-radius: 8px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin-right: 100px;
+}
+
+.nav-links li:last-child {
+  margin-right: 100px; /* Deja espacio para .user-menu */
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links li.active a {
+  border-bottom: 2px solid #1abc9c;
+}
+
+.user-menu {
+  position: absolute;
+  top: 27px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.username {
+  font-weight: 500;
+  color: white;
+}
+
+.dropdown-user {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  min-width: 150px;
+  z-index: 100;
+}
+
+.dropdown-user a {
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: var(--color-primary);
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-user a:hover {
+  background-color: var(--color-bg);
+}
+
+.user-menu:hover .dropdown-user {
+  display: flex;
+}
+
+.panel-reportes {
+  padding: 2rem;
+  background-color: #f9fafc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  font-family: 'Segoe UI', sans-serif;
+}
+.panel-reportes h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.kpi-container {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.kpi-box {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.kpi-box h3 {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+.kpi-box p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #0078D4;
+}
+.filtros-reportes {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.filtros-reportes input,
+.filtros-reportes select {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.botones-reportes {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.botones-reportes button {
+  padding: 0.7rem 1.2rem;
+  background-color: #0078D4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.botones-reportes button:hover {
+  background-color: #005ea2;
+}
+
+.tabla-reportes {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.tabla-reportes th,
+.tabla-reportes td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+.tabla-reportes th {
+  background-color: #f0f2f5;
+  color: #555;
+  font-weight: 600;
+}
+.tabla-reportes tr:hover {
+  background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+  .kpi-container {
+    flex-direction: column;
+  }
+  .filtros-reportes {
+    flex-direction: column;
+  }
+  .botones-reportes {
+    flex-direction: column;
+  }
+}
+

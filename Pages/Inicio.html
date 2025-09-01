@@ -3,140 +3,78 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Inicio</title>
-    <link rel="stylesheet" href="../Styles/Inicio.css">
+        <title>Inicio | Inventory Join</title>
+        <link rel="stylesheet" href="../Styles/Inicio.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
             rel="stylesheet">
     </head>
-    <body data-page="inicio">
 
-        <!--NAV SIDEBAR -->
-        <nav class="nav_grid">
-
-            <nav class="nav">
-
-                <ul class="nav__list">
-
-                    <li class="nav__item"
-                        onclick="window.location.href='Inicio.html'">
-                        <figure class="nav__figure">
-                            <img src="../assets/home.svg" class="nav__img">
-                        </figure>
-
-                        <article class="nav__show">
-
-                            <p class="nav__name">
-                                Inicio
-                            </p>
-
-                        </article>
-
-                    </li>
-                    <!--
-                    <li class="nav__item">
-                        <figure class="nav__figure">
-                            <img src="..//assets/search.svg" class="nav__img">
-                        </figure>
-                        <div class="div">
-                            <input type="text" class="nav__search"
-                                placeholder="Buscar">
-                        </div>
-                                -->
-                    </li>
-
-                    <li class="nav__item"
-                        onclick="window.location.href='Products.html'">
-
-                        <figure class="nav__figure">
-                            <img src="..//assets/products.svg" class="nav__img">
-                        </figure>
-
-                        <article class="nav__show">
-
-                            <p class="nav__name">
-                                Productos
-                            </p>
-
-                        </article>
-
-                    </li>
-
-                    <li class="nav__item">
-
-                        <figure class="nav__figure">
-                            <img src="..//assets/proveedores.svg"
-                                class="nav__img">
-                        </figure>
-
-                        <article class="nav__show">
-
-                            <p class="nav__name">
-                                Proveedores
-                            </p>
-
-                        </article>
-
-                    </li>
-
-                    <li class="nav__item">
-
-                        <figure class="nav__figure">
-                            <img src="..//assets/reports.svg" class="nav__img">
-                        </figure>
-
-                        <article class="nav__show">
-
-                            <p class="nav__name">
-                                Reportes
-                            </p>
-
-                        </article>
-
-                    </li>
-
-                    <li class="nav__item nav__item--down">
-
-                        <figure class="nav__figure">
-                            <img src="..//assets/settings.svg" class="nav__img">
-                        </figure>
-
-                        <article class="nav__show">
-
-                            <p class="nav__name">
-                                Configuración
-                            </p>
-
-                        </article>
-
-                    </li>
-
-                    <li class="nav__item nav__item--user" onclick="window.location.href='/Pages/index.html'">
-
-                        <figure class="nav__figure">
-                            <img src="..//images/avatar_Profile.png"
-                                class="nav__img nav__img--avatar">
-                        </figure>
-
-                        <article class="nav__show">
-
-                            <div class="nav__name nav__name--user">
-                                <h3 class="nav__username">Sebastian
-                                    Hernandez</h3>
-                                <p class="nav__account">Cuenta Free</p>
-                            </div>
-
-                        </article>
-
-                    </li>
-
+        <header>
+            <nav class="navbar">
+                <span class="logo">Inventory Join</span>
+                <ul class="nav-links">
+                    <li class="active"><a href="#">Inicio</a></li>
+                    <li><a href="Products.html">Productos</a></li>
+                    <li><a href="Suppliers.html">Proveedores</a></li>
+                    <li><a href="Reports.html">Reportes</a></li>
+                    <li><a href="Config.html">Configuración</a></li>
                 </ul>
-
+                <div class="user-menu">
+                        <img src="../images/avatar_Profile.png" alt="Avatar"
+                            class="avatar" />
+                        <span class="username">Sebastián Hernández</span>
+                        <div class="dropdown-user">
+                            <a href="..//Pages/Perfil.html">Mi Perfil</a>
+                            <a href="..//Pages/index.html" id="logout">Cerrar Sesión</a>
+                        </div>
+                    </div>
             </nav>
+        </header>
 
-        </nav>
+        <main>
+            <section class="welcome">
+                <h1>Bienvenido, Sebastián</h1>
+                <h2>Panel de control</h2>
+            </section>
 
+            <section class="dashboard">
+                <div class="card">📦 Inventario
+                    total<br><strong>1,250
+                        productos registrados</strong></div>
+                <div class="card">⚠️ Productos por
+                    agotarse<br><strong>32
+                        productos en nivel crítico</strong></div>
+                <div class="card">🧾 Órdenes recientes<br><strong>15
+                        órdenes
+                        esta semana</strong></div>
+            </section>
+
+            <section class="quick-actions">
+                <button onclick="window.location.href='Products.html'">➕ Nuevo producto</button>
+                <button onclick="window.location.href='Suppliers.html'">🏢 Registrar proveedor</button>
+                <button onclick="window.location.href='Reports.html'">📊 Generar reporte</button>
+            </section>
+
+            <section class="notifications">
+                <div class="alert">⚠️ 5 productos vencidos necesitan
+                    revisión</div>
+                <div class="alert">📉 2 proveedores inactivos en los
+                    últimos
+                    30 días</div>
+                <div class="alert">📌 Reporte mensual aún no
+                    generado</div>
+            </section>
+
+            <section class="account-status">
+                <p>Cuenta: Free</p>
+                <p>Actualiza a Premium para desbloquear reportes
+                    avanzados,
+                    exportación y soporte prioritario</p>
+                <button class="upgrade">Actualizar cuenta</button>
+            </section>
+        </main>
     </body>
 </html>

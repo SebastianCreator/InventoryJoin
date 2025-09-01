@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Proveedores | Inventory Join</title>
+        <link rel="stylesheet" href="../Styles/suppliers.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+            rel="stylesheet">
+        <script src="..//modules/proveedores.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <span class="logo">Inventory Join</span>
+                <ul class="nav-links">
+                    <li><a href="Inicio.html">Inicio</a></li>
+                    <li><a href="Products.html">Productos</a></li>
+                    <li class="active"><a href="#">Proveedores</a></li>
+                    <li><a href="Reports.html">Reportes</a></li>
+                    <li><a href="Config.html">Configuración</a></li>
+                </ul>
+                <div class="user-menu">
+                    <img src="../images/avatar_Profile.png" alt="Avatar"
+                        class="avatar" />
+                    <span class="username">Sebastián Hernández</span>
+                    <div class="dropdown-user">
+                        <a href="..//Pages/Perfil.html">Mi Perfil</a>
+                        <a href="..//Pages/index.html" id="logout">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <h1>📦 Panel de Proveedores</h1>
+
+            <section class="status-indicators">
+                <div class="status-card active">🔄 Activos: 16</div>
+                <div class="status-card inactive">⛔ Inactivos: 4</div>
+            </section>
+
+            <section class="actions">
+                <button id="openModalProveedor">➕ Nuevo proveedor</button>
+                <!-- Modal para agregar proveedor -->
+                <div id="modalAgregarProveedor" class="modal hidden">
+                    <div class="modal-contenido">
+                        <span class="cerrar-modal"
+                            id="cerrarModalProveedor">&times;</span>
+                        <h2>Agregar nuevo proveedor</h2>
+                        <form id="formAgregarProveedor">
+                            <label>Nombre:</label>
+                            <input type="text" name="nombre" required />
+
+                            <label>Empresa:</label>
+                            <input type="text" name="empresa" required />
+
+                            <label>Contacto:</label>
+                            <input type="text" name="contacto" required />
+
+                            <label>Estado:</label>
+                            <select name="estado">
+                                <option value="Activo">Activo</option>
+                                <option value="Inactivo">Inactivo</option>
+                            </select>
+
+                            <button type="submit">Guardar proveedor</button>
+                        </form>
+                    </div>
+                </div>
+                <button>📤 Exportar</button>
+            </section>
+
+            <section class="table-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Empresa</th>
+                            <th>Contacto</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Juan Pérez</td>
+                            <td>Distribuciones JP</td>
+                            <td>juan@jp.com</td>
+                            <td><span
+                                    class="status-tag activo">Activo</span></td>
+                            <td class="table-actions">
+                                <button>✏️ Editar</button>
+                                <button>🗑️ Eliminar</button>
+                            </td>
+                        </tr>
+                        <!-- Más filas aquí -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+    </body>
